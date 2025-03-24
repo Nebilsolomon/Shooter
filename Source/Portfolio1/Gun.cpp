@@ -94,11 +94,15 @@ bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECollisi
 
 if (bHit)
 {
+
+   FVector ShotDirection =  - Rotation.Vector(); 
+    UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ImpactEffect, HitResult.Location, ShotDirection.Rotation() );
     // Handle the hit result, for example, print the name of the hit actor
+  
     AActor* HitActor = HitResult.GetActor();
     if (HitActor)
     {
-
+     
         DrawDebugPoint(GetWorld(), HitResult.Location, 20, FColor::Red, true );
 
     }

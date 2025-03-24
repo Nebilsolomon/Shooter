@@ -40,4 +40,8 @@ private:
 	UParticleSystem* ImpactEffect;
 
 
+	UPROPERTY(EditAnywhere)
+	 float Damage = 10 ; 
+
+
 };

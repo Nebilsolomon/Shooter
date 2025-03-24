@@ -75,6 +75,16 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 	
 }
 
+float AShooterCharacter::TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser)
+{
+	
+  float DamageApplied = Super::TakeDamage( DamageAmount,  DamageEvent, EventInstigator,  DamageCauser); 
+
+
+  return DamageApplied; 
+
+}
+
 void AShooterCharacter::MoveForward(float axisValue)
 {
 	AddMovementInput(GetActorForwardVector() * axisValue);

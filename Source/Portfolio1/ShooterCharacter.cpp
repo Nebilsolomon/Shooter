@@ -19,6 +19,8 @@ void AShooterCharacter::BeginPlay()
 	Super::BeginPlay();
 	// Spawn the Gun actor
 
+	Health = MaxHealth;
+
 
 	Gun= GetWorld()->SpawnActor<AGun>(GunClass);
 
@@ -79,6 +81,12 @@ float AShooterCharacter::TakeDamage(float DamageAmount, struct FDamageEvent cons
 {
 	
   float DamageApplied = Super::TakeDamage( DamageAmount,  DamageEvent, EventInstigator,  DamageCauser); 
+
+  DamageApplied = FMath::Min(Health , DamageApplied);
+
+  Health -= DamageApplied;
+
+  UE_LOG(LogTemp, Warning, TEXT("Healht left %f"), Health);
 
 
   return DamageApplied; 

@@ -49,4 +49,9 @@ public:
    UPROPERTY()
    AGun* Gun;  // This is the member variable
 
+   UPROPERTY(EditDefaultsOnly, Category = "nebil")
+	float MaxHealth = 100; 
+
+	UPROPERTY(EditDefaultsOnly, Category = "nebil")
+	float Health = 10; 
 };

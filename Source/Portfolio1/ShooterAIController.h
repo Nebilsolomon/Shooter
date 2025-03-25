@@ -17,5 +17,10 @@ class PORTFOLIO1_API AShooterAIController : public AAIController
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	virtual void Tick(float DeltaTime) override;
+
+	public:
+	APawn* PlayerPawn;
+
 	
 };

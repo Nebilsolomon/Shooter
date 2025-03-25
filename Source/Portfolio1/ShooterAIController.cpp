@@ -12,4 +12,5 @@ void AShooterAIController::BeginPlay()
 
     // Set focus on the player pawn
     SetFocus(PlayerPawn);
+    MoveToActor(PlayerPawn,200);
 }

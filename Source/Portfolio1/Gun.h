@@ -36,5 +36,12 @@ private:
 	UPROPERTY(EditAnywhere, Category = "nebil")
 	UParticleSystem* MuzzleFlash;
 
+	UPROPERTY(EditAnywhere, Category = "nebil")
+	UParticleSystem* ImpactEffect;
+
+
+	UPROPERTY(EditAnywhere)
+	 float Damage = 10 ; 
+
 
 };

@@ -7,6 +7,8 @@
 
 #include "DrawDebugHelpers.h"
 
+#include "Engine/DamageEvents.h" // This is the most important missing include
+
 
 // Sets default values
 AGun::AGun()
@@ -94,14 +96,28 @@ bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECollisi
 
 if (bHit)
 {
-    // Handle the hit result, for example, print the name of the hit actor
-    AActor* HitActor = HitResult.GetActor();
-    if (HitActor)
-    {
 
-        DrawDebugPoint(GetWorld(), HitResult.Location, 20, FColor::Red, true );
+   FVector ShotDirection =  - Rotation.Vector(); 
+    UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ImpactEffect, HitResult.Location, ShotDirection.Rotation() );
+
+
+
+    AActor * HitActor = HitResult.GetActor();
+    if (HitActor != nullptr) {
+      
+        FPointDamageEvent DamageEvent(Damage,HitResult, ShotDirection, nullptr );
+
+        HitActor->TakeDamage(Damage, DamageEvent, ownerController, this );
 
     }
+   
+    
+
+
+
+
+
+
 }
 
 

@@ -19,6 +19,8 @@ void AShooterCharacter::BeginPlay()
 	Super::BeginPlay();
 	// Spawn the Gun actor
 
+	Health = MaxHealth;
+
 
 	Gun= GetWorld()->SpawnActor<AGun>(GunClass);
 
@@ -74,6 +76,30 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 
 	
 }
+
+float AShooterCharacter::TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser)
+{
+	
+  float DamageApplied = Super::TakeDamage( DamageAmount,  DamageEvent, EventInstigator,  DamageCauser); 
+
+  DamageApplied = FMath::Min(Health , DamageApplied);
+
+  Health -= DamageApplied;
+
+  UE_LOG(LogTemp, Warning, TEXT("Healht left =  %f"), Health);
+
+
+  return DamageApplied; 
+
+}
+
+
+
+bool AShooterCharacter::IsDead() const
+{
+    return Health <= 0;
+}
+
 
 void AShooterCharacter::MoveForward(float axisValue)
 {

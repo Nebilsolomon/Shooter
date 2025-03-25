@@ -1,0 +1,7 @@
+# Ignore Unreal Engine generated folders
+Binaries/
+Saved/
+Intermediate/
+
+# Ignore log files
+*.log

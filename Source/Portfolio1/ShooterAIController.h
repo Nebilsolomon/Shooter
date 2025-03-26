@@ -19,8 +19,10 @@ class PORTFOLIO1_API AShooterAIController : public AAIController
 
 	virtual void Tick(float DeltaTime) override;
 
-	public:
-	APawn* PlayerPawn;
+	// public:
+	// APawn* PlayerPawn;
 
+	UPROPERTY(EditAnywhere, Category="nebil")
+    class UBehaviorTree * AIBehavior;
 	
 };

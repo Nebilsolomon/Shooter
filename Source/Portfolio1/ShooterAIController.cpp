@@ -2,6 +2,8 @@
 
 #include "ShooterAIController.h"
 #include "Kismet/GameplayStatics.h"
+#include "BehaviorTree/BlackboardComponent.h"
+
 
 void AShooterAIController::BeginPlay()
 {
@@ -17,7 +19,11 @@ void AShooterAIController::BeginPlay()
     {
 
         RunBehaviorTree(AIBehavior);
-        /* code */
+
+        PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+
+        GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"),PlayerPawn->GetActorLocation());
+       
     }
     
    
@@ -36,61 +42,8 @@ void AShooterAIController::Tick(float DeltaTime)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    // // Check if the AI has line of sight to the player
-    // if (LineOfSightTo(PlayerPawn))
-    // {
-    //     // Set focus and move to the player
-    //     SetFocus(PlayerPawn);
-    //     MoveToActor(PlayerPawn, 400);
-    // }
-    // else
-    // {
-    //     // Clear focus and stop movement if no line of sight
-    //     ClearFocus(EAIFocusPriority::Gameplay);
-    //     StopMovement();
-    // }
+ 
 }
 
 
 
-
-
-
-
-
-
-
-// void AShooterAIController::Tick(float DeltaTime)
-// {
-//     Super::Tick(float DeltaTime);
-     
-
-
-
-
-//      if (LineOfSightTo(PlayerPawn))
-//      {
-//             SetFocus(PlayerPawn);
-//             MoveToActor(PlayerPawn,200);
-//      }
-//      else {
-
-
-//         ClearFocus(EAIFocusPriority::Gameplay);
-//         StopMovement();
-//      }
-
-     
-// }

@@ -1,21 +1,5 @@
 [
 	{
-		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\DeleteCharacter.cpp",
-		"arguments": [
-			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
-			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"
-		],
-		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
-	},
-	{
-		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\DeleteCharacter.h",
-		"arguments": [
-			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
-			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"
-		],
-		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
-	},
-	{
 		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\Gun.cpp",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
@@ -49,6 +33,22 @@
 	},
 	{
 		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\Portfolio1.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\ShooterAIController.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\ShooterAIController.h",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
 			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"

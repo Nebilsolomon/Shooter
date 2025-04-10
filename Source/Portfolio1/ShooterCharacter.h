@@ -16,6 +16,7 @@ class PORTFOLIO1_API AShooterCharacter : public ACharacter
 public:
 	// Sets default values for this character's properties
 	AShooterCharacter();
+		void Shoot();
 
 protected:
 	// Called when the game starts or when spawned
@@ -42,7 +43,7 @@ public:
 
 	void MoveRight(float axisValue);
 	void LookRight(float axisValue);
-	void Shoot();
+
 
 	public:
 	UPROPERTY(EditDefaultsOnly, Category = "nebil")

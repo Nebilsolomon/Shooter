@@ -41,21 +41,6 @@ void AShooterAIController::Tick(float DeltaTime)
 
 
 
-    //LastKnownPlayerLocation
-
-    if (LineOfSightTo(PlayerPawn))
-
-   
-    {      
-         GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"),PlayerPawn->GetActorLocation());
-         GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownPlayerLocation"),PlayerPawn->GetActorLocation());
-
-
-    }else {
-
-
-        GetBlackboardComponent()->ClearValue(TEXT("PlayerLocation"));
-    }
     
 
  

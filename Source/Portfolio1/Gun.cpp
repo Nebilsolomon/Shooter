@@ -84,15 +84,17 @@ ownerController->GetPlayerViewPoint(Location, Rotation);
 
 //ECC_GameTraceChannel1
 
-DrawDebugSphere(GetWorld(), Location, 10.0f, 12, FColor::Red, true, 4.1f);
-
+//DrawDebugSphere(GetWorld(), Location, 10.0f, 12, FColor::Red, true, 4.1f);
+FCollisionQueryParams Params;
+Params.AddIgnoredActor(this);
+Params.AddIgnoredActor(GetOwner());
 
 FHitResult HitResult;
 FVector Start = Location; // Starting point of the trace (player's camera position)
 FVector End = Start + (Rotation.Vector() * 1000); // Direction of the trace based on rotation, and scaled by 1000 units
 ECollisionChannel TraceChannel = ECC_GameTraceChannel1; // The channel to use for the trace, such as ECC_Visibility, ECC_WorldStatic, etc.
 
-bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECollisionChannel::ECC_GameTraceChannel1);
+bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECollisionChannel::ECC_GameTraceChannel1, Params);
 
 if (bHit)
 {

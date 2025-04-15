@@ -46,5 +46,10 @@ void AShooterAIController::Tick(float DeltaTime)
  
 }
 
+bool AShooterAIController::IsDead() const
+{
+    
+}
+
 
 

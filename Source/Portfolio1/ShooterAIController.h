@@ -19,6 +19,8 @@ class PORTFOLIO1_API AShooterAIController : public AAIController
 
 	virtual void Tick(float DeltaTime) override;
 
+	bool IsDead() const;
+
 	public:
 	APawn* PlayerPawn;
 

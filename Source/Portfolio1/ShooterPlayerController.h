@@ -20,6 +20,12 @@ class PORTFOLIO1_API AShooterPlayerController : public APlayerController
    private:
    UPROPERTY(EditAnywhere, Category = "Nebil")
    TSubclassOf<class UUserWidget> LoseScreenClass;
+
+
+   private:
+   UPROPERTY(EditAnywhere, Category = "Nebil")
+   TSubclassOf<class UUserWidget> WinScreenClass;
+   
    
   
    UPROPERTY(EditAnywhere)

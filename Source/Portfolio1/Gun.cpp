@@ -45,69 +45,96 @@ void AGun::Tick(float DeltaTime)
 
 }
 
+bool AGun::GunTrace(FHitResult &Hit, FVector &ShotDirection)
+{
+       // UE_LOG(LogTemp, Warning, TEXT("You have been shot, Nebil!"));
+
+       if (MuzzleFlash)  
+       {
+           UGameplayStatics::SpawnEmitterAttached(
+               MuzzleFlash,
+               Mesh,  // Your gun mesh component
+               TEXT("MuzzleFlashSocket")
+           );
+       }
+       else  
+       {
+           UE_LOG(LogTemp, Warning, TEXT("MuzzleFlash is NULL! Assign a valid particle effect."));
+       }
+   
+     
+   
+     
+     
+       AController *ownerController = GetOwnerController();
+       if(ownerController== nullptr)  
+       return false; 
+   
+   
+   FVector Location; 
+   FRotator Rotation;
+   ownerController->GetPlayerViewPoint(Location, Rotation);
+
+  ShotDirection =  - Rotation.Vector(); 
+
+   
+   
+   
+   //ECC_GameTraceChannel1
+   
+   //DrawDebugSphere(GetWorld(), Location, 10.0f, 12, FColor::Red, true, 4.1f);
+   FCollisionQueryParams Params;
+   Params.AddIgnoredActor(this);
+   Params.AddIgnoredActor(GetOwner());
+   
+
+   FVector Start = Location; // Starting point of the trace (player's camera position)
+   FVector End = Start + (Rotation.Vector() * 1000); // Direction of the trace based on rotation, and scaled by 1000 units
+   ECollisionChannel TraceChannel = ECC_GameTraceChannel1; // The channel to use for the trace, such as ECC_Visibility, ECC_WorldStatic, etc.
+   
+   return  GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECollisionChannel::ECC_GameTraceChannel1, Params);
+   
+
+
+
+
+
+
+
+
+}
+
 
 
 
 void AGun::PullTrigger()
 {
-   // UE_LOG(LogTemp, Warning, TEXT("You have been shot, Nebil!"));
-
-    if (MuzzleFlash)  
-    {
-        UGameplayStatics::SpawnEmitterAttached(
-            MuzzleFlash,
-            Mesh,  // Your gun mesh component
-            TEXT("MuzzleFlashSocket")
-        );
-    }
-    else  
-    {
-        UE_LOG(LogTemp, Warning, TEXT("MuzzleFlash is NULL! Assign a valid particle effect."));
-    }
-
   
 
-  
-APawn * OwnerPawn = Cast<APawn>(GetOwner());
-if(OwnerPawn== nullptr) return; 
-
-
-AController *ownerController = OwnerPawn->GetController(); 
-if(ownerController== nullptr) return; 
-
-
-FVector Location; 
-FRotator Rotation;
-ownerController->GetPlayerViewPoint(Location, Rotation);
 
 
 
-//ECC_GameTraceChannel1
 
-//DrawDebugSphere(GetWorld(), Location, 10.0f, 12, FColor::Red, true, 4.1f);
-FCollisionQueryParams Params;
-Params.AddIgnoredActor(this);
-Params.AddIgnoredActor(GetOwner());
+FHitResult Hit; 
+FVector ShotDirection; 
 
-FHitResult HitResult;
-FVector Start = Location; // Starting point of the trace (player's camera position)
-FVector End = Start + (Rotation.Vector() * 1000); // Direction of the trace based on rotation, and scaled by 1000 units
-ECollisionChannel TraceChannel = ECC_GameTraceChannel1; // The channel to use for the trace, such as ECC_Visibility, ECC_WorldStatic, etc.
 
-bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECollisionChannel::ECC_GameTraceChannel1, Params);
+bool bHit  = GunTrace(Hit, ShotDirection); 
+
 
 if (bHit)
 {
 
-   FVector ShotDirection =  - Rotation.Vector(); 
-    UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ImpactEffect, HitResult.Location, ShotDirection.Rotation() );
+    UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ImpactEffect, Hit.Location, ShotDirection.Rotation() );
 
 
 
-    AActor * HitActor = HitResult.GetActor();
+    AActor * HitActor = Hit.GetActor();
     if (HitActor != nullptr) {
       
-        FPointDamageEvent DamageEvent(Damage,HitResult, ShotDirection, nullptr );
+        FPointDamageEvent DamageEvent(Damage,Hit, ShotDirection, nullptr );
+        AController *ownerController = GetOwnerController();
+
 
         HitActor->TakeDamage(Damage, DamageEvent, ownerController, this );
 
@@ -124,9 +151,15 @@ if (bHit)
 
 
 
+}
 
+
+
+AController * AGun::GetOwnerController () const{
+
+    APawn * OwnerPawn = Cast<APawn>(GetOwner());
+    if(OwnerPawn== nullptr){ return nullptr;} 
     
-
-
-
+    
+   return OwnerPawn->GetController();
 }

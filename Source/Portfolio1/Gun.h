@@ -42,6 +42,9 @@ private:
 	UPROPERTY(EditAnywhere, Category = "nebil")
 	USoundBase * MuzzleSound;
 
+	UPROPERTY(EditAnywhere, Category = "nebil")
+	USoundBase * ImpactSound;
+
 
 	UPROPERTY(EditAnywhere)
 	 float Damage = 10 ; 

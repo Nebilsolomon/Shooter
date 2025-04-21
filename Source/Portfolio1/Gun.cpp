@@ -136,6 +136,8 @@ if (bHit)
         FPointDamageEvent DamageEvent(Damage,Hit, ShotDirection, nullptr );
         AController *ownerController = GetOwnerController();
 
+   UGameplayStatics::PlaySoundAtLocation(GetWorld(), ImpactSound, HitActor->GetActorLocation());
+        
 
         HitActor->TakeDamage(Damage, DamageEvent, ownerController, this );
 

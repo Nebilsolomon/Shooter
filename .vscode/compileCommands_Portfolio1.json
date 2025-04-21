@@ -1,5 +1,53 @@
 [
 	{
+		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\BTService_PlayerLocation.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\BTService_PlayerLocation.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\BTService_PlayerLocationifSeen.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\BTService_PlayerLocationifSeen.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\BTTaskShoot.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\BTTaskShoot.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
 		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\BTTask_ClearBlackboardValue.cpp",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
@@ -25,6 +73,22 @@
 	},
 	{
 		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\Gun.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\KillEmAllGameMode.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\KillEmAllGameMode.h",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
 			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"
@@ -81,6 +145,38 @@
 	},
 	{
 		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\ShooterCharacter.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\ShooterPlayerController.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\ShooterPlayerController.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\SimpleShooterGameModeBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\Source\\Portfolio1\\SimpleShooterGameModeBase.h",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
 			"@C:\\Users\\nebil\\OneDrive\\Desktop\\potfolio\\Project\\Portfolio1\\.vscode\\compileCommands_Portfolio1\\Portfolio1.1.rsp"

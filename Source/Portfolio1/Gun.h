@@ -39,9 +39,18 @@ private:
 	UPROPERTY(EditAnywhere, Category = "nebil")
 	UParticleSystem* ImpactEffect;
 
+	UPROPERTY(EditAnywhere, Category = "nebil")
+	USoundBase * MuzzleSound;
+
+	UPROPERTY(EditAnywhere, Category = "nebil")
+	USoundBase * ImpactSound;
+
 
 	UPROPERTY(EditAnywhere)
 	 float Damage = 10 ; 
 
+	 bool GunTrace(FHitResult &Hit, FVector &ShotDirection );
+
+	 AController * GetOwnerController () const; 
 
 };

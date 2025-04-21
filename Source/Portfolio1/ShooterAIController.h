@@ -18,11 +18,15 @@ class PORTFOLIO1_API AShooterAIController : public AAIController
 	virtual void BeginPlay() override;
 
 	virtual void Tick(float DeltaTime) override;
+public:
+	bool IsDead() const;
 
-	public:
+	
 	APawn* PlayerPawn;
 
 	UPROPERTY(EditAnywhere, Category="nebil")
     class UBehaviorTree * AIBehavior;
+
+
 	
 };

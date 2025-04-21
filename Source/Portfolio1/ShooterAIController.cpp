@@ -6,6 +6,8 @@
 #include "ShooterCharacter.h"
 
 
+
+
 void AShooterAIController::BeginPlay()
 {
     Super::BeginPlay();
@@ -54,6 +56,10 @@ if (ControlledCharacter == nullptr) return true;
 
 return ControlledCharacter->IsDead();
 }
+
+
+
+
 
 
 

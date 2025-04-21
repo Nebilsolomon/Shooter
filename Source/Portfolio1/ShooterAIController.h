@@ -26,5 +26,7 @@ public:
 
 	UPROPERTY(EditAnywhere, Category="nebil")
     class UBehaviorTree * AIBehavior;
+
+
 	
 };

@@ -16,11 +16,17 @@ class PORTFOLIO1_API AShooterPlayerController : public APlayerController
 	GENERATED_BODY()
 	public:
    virtual void GameHasEnded(class AActor* EndGameFocus = nullptr, bool bIsWinner = false) override;
+
+   protected:
+ virtual void BeginPlay() override;
    
    private:
    UPROPERTY(EditAnywhere, Category = "Nebil")
    TSubclassOf<class UUserWidget> LoseScreenClass;
 
+   UPROPERTY(EditAnywhere, Category = "Nebil")
+   TSubclassOf<class UUserWidget> Hub;
+   UUserWidget* HubClass;
 
    private:
    UPROPERTY(EditAnywhere, Category = "Nebil")
@@ -31,4 +37,6 @@ class PORTFOLIO1_API AShooterPlayerController : public APlayerController
    UPROPERTY(EditAnywhere)
    float RestartDelay = 5; 
    FTimerHandle RestartTimer;
+
+ 
 };

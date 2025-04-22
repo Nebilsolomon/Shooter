@@ -120,6 +120,7 @@ FVector ShotDirection;
 
 
 bool bHit  = GunTrace(Hit, ShotDirection); 
+UGameplayStatics::SpawnSoundAttached(MuzzleSound,  Mesh, TEXT("MuzzleFlashSocket") );
 
 
 if (bHit)
@@ -127,7 +128,6 @@ if (bHit)
 
     UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ImpactEffect, Hit.Location, ShotDirection.Rotation() );
 
-    UGameplayStatics::SpawnSoundAttached(MuzzleSound,  Mesh, TEXT("MuzzleFlashSocket") );
 
 
     AActor * HitActor = Hit.GetActor();

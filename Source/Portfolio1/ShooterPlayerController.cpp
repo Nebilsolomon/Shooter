@@ -11,7 +11,7 @@ void AShooterPlayerController::GameHasEnded(class AActor* EndGameFocus, bool bIs
   
     Super::GameHasEnded(EndGameFocus, bIsWinner);
 
-
+    HubClass->RemoveFromViewport();
     if(bIsWinner) {
 
 
@@ -45,4 +45,17 @@ void AShooterPlayerController::GameHasEnded(class AActor* EndGameFocus, bool bIs
     GetWorldTimerManager().SetTimer(RestartTimer, this, &APlayerController::RestartLevel, RestartDelay);
 
 
+}
+
+void AShooterPlayerController::BeginPlay()
+{
+
+    Super::BeginPlay();
+    
+     HubClass = CreateWidget(this, Hub);
+
+    if (HubClass != nullptr)
+    {
+        HubClass->AddToViewport();
+    }
 }

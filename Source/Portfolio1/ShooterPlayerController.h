@@ -24,15 +24,18 @@ class PORTFOLIO1_API AShooterPlayerController : public APlayerController
    UPROPERTY(EditAnywhere, Category = "Nebil")
    TSubclassOf<class UUserWidget> LoseScreenClass;
 
-   UPROPERTY(EditAnywhere, Category = "Nebil")
-   TSubclassOf<class UUserWidget> Hub;
-   UUserWidget* HubClass;
 
-   private:
    UPROPERTY(EditAnywhere, Category = "Nebil")
    TSubclassOf<class UUserWidget> WinScreenClass;
    
    
+
+   UPROPERTY(EditAnywhere, Category = "Nebil")
+   TSubclassOf<class UUserWidget> Hub;
+   UUserWidget* HubClass;
+
+ 
+  
   
    UPROPERTY(EditAnywhere)
    float RestartDelay = 5; 

@@ -11,7 +11,7 @@ void AShooterPlayerController::GameHasEnded(class AActor* EndGameFocus, bool bIs
   
     Super::GameHasEnded(EndGameFocus, bIsWinner);
 
-    HubClass->RemoveFromViewport();
+//    HubClass->RemoveFromViewport();
     if(bIsWinner) {
 
 
@@ -38,7 +38,8 @@ void AShooterPlayerController::GameHasEnded(class AActor* EndGameFocus, bool bIs
 
 
 
-    
+   HubClass->RemoveFromViewport();
+ 
    
     
 
